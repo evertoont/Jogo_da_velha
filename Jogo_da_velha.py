@@ -22,3 +22,7 @@ def escolher_marcador():
         return ('X', 'O')
     else:
         return ('O', 'X')
+
+def marcar_posicao(tabuleiro, marcador, posicao):
+
+    tabuleiro[posicao] = marcador
