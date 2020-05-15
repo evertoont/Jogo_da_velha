@@ -76,6 +76,12 @@ def escolha_jogada(tabuleiro, jogador):
 
     return int(posicao)
 
+
+def replay():
+
+    return input('Você quer jogar novamente? SIM ou NÃO?').lower().startswith('s')
+
+
 while True:
 
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -122,3 +128,7 @@ while True:
                     break
                 else:
                     turno_jogador = 'Jogador 1'
+
+
+    if not replay():
+        break
