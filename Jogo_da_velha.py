@@ -64,3 +64,13 @@ def checagem_empate(tabuleiro):
         if checar_espaco(tabuleiro, i):
             return False
     return True
+
+
+def escolha_jogada(tabuleiro, jogador):
+
+    posicao = ' '
+    while posicao not in '1 2 3 4 5 6 7 8 9'.split() or not checar_espaco(tabuleiro, int(posicao)):
+
+        posicao = input(f'{jogador} escolha sua jogada entre 1-9:')
+
+    return int(posicao)
