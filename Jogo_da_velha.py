@@ -86,3 +86,39 @@ while True:
     turno_jogador = primeiro_jogar()
     print(turno_jogador, 'começa!')
     status_jogo = True
+
+    while status_jogo:
+
+        if turno_jogador == 'Jogador 1':
+            printar_tabuleiro(tabuleiro)
+            posicao_jogada = escolha_jogada(tabuleiro, turno_jogador)
+            marcar_posicao(tabuleiro, jogador_1, posicao_jogada)
+
+            if checar_vitoria(tabuleiro, jogador_1):
+                printar_tabuleiro(tabuleiro)
+                print("Parabéns você ganhou a partida!")
+                status_jogo = False
+            else:
+                if checagem_empate(tabuleiro):
+                    printar_tabuleiro(tabuleiro)
+                    print("O jogo empatou !!!")
+                    break
+                else:
+                    turno_jogador = 'Jogador 2'
+
+        else:
+            printar_tabuleiro(tabuleiro)
+            posicao_jogada = escolha_jogada(tabuleiro, turno_jogador)
+            marcar_posicao(tabuleiro, jogador_2, posicao_jogada)
+
+            if checar_vitoria(tabuleiro, jogador_2):
+                printar_tabuleiro(tabuleiro)
+                print("Parabéns você ganhou a partida!")
+                status_jogo = False
+            else:
+                if checagem_empate(tabuleiro):
+                    printar_tabuleiro(tabuleiro)
+                    print("O jogo empatou !!!")
+                    break
+                else:
+                    turno_jogador = 'Jogador 1'
