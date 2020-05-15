@@ -26,3 +26,16 @@ def escolher_marcador():
 def marcar_posicao(tabuleiro, marcador, posicao):
 
     tabuleiro[posicao] = marcador
+
+def checar_vitoria(tabuleiro, marcador):
+
+    return (
+        (tabuleiro[1] == marcador and tabuleiro[2] == marcador and tabuleiro[3] == marcador) or
+        (tabuleiro[4] == marcador and tabuleiro[5] == marcador and tabuleiro[6] == marcador) or
+        (tabuleiro[7] == marcador and tabuleiro[8] == marcador and tabuleiro[9] == marcador) or
+        (tabuleiro[1] == marcador and tabuleiro[4] == marcador and tabuleiro[7] == marcador) or
+        (tabuleiro[2] == marcador and tabuleiro[5] == marcador and tabuleiro[8] == marcador) or
+        (tabuleiro[3] == marcador and tabuleiro[6] == marcador and tabuleiro[9] == marcador) or
+        (tabuleiro[1] == marcador and tabuleiro[5] == marcador and tabuleiro[9] == marcador) or
+        (tabuleiro[7] == marcador and tabuleiro[5] == marcador and tabuleiro[3] == marcador)
+    )
