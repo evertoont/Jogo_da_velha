@@ -57,3 +57,10 @@ def primeiro_jogar():
 def checar_espaco(tabuleiro, posicao):
 
     return tabuleiro[posicao] == ' '
+
+
+def checagem_empate(tabuleiro):
+    for i in range(1, 10):
+        if checar_espaco(tabuleiro, i):
+            return False
+    return True
