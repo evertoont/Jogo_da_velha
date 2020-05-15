@@ -20,7 +20,7 @@ def escolher_marcador():
 
     marcador = ''
     while not (marcador == 'X' or marcador == 'O'):
-        marcador = input('Player 1: Você quer ser X ou O?').upper()
+        marcador = input('Player 1: Você quer ser X ou O? ').upper()
 
     if marcador == 'X':
         return ('X', 'O')
@@ -72,14 +72,14 @@ def escolha_jogada(tabuleiro, jogador):
     posicao = ' '
     while posicao not in '1 2 3 4 5 6 7 8 9'.split() or not checar_espaco(tabuleiro, int(posicao)):
 
-        posicao = input(f'{jogador} escolha sua jogada entre 1-9:')
+        posicao = input(f'{jogador} - escolha sua jogada entre 1-9: ')
 
     return int(posicao)
 
 
 def replay():
 
-    return input('Você quer jogar novamente? SIM ou NÃO?').lower().startswith('s')
+    return input('Você quer jogar novamente? SIM ou NÃO? ').lower().startswith('s')
 
 
 while True:
