@@ -1,4 +1,5 @@
 import random
+import os
 
 def printar_tabuleiro(tabuleiro):
 
@@ -74,3 +75,14 @@ def escolha_jogada(tabuleiro, jogador):
         posicao = input(f'{jogador} escolha sua jogada entre 1-9:')
 
     return int(posicao)
+
+while True:
+
+    os.system('cls' if os.name == 'nt' else 'clear')
+    print('Bem vindo ao jogo da velha!')
+
+    tabuleiro = [' '] * 10
+    jogador_1, jogador_2 = escolher_marcador()
+    turno_jogador = primeiro_jogar()
+    print(turno_jogador, 'começa!')
+    status_jogo = True
