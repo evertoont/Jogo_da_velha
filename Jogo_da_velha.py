@@ -52,3 +52,8 @@ def primeiro_jogar():
         return 'Jogador 1'
     else:
         return 'Jogador 2'
+
+
+def checar_espaco(tabuleiro, posicao):
+
+    return tabuleiro[posicao] == ' '
