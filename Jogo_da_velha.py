@@ -1,3 +1,5 @@
+import random
+
 def printar_tabuleiro(tabuleiro):
 
     print('     |     |       ')
@@ -12,6 +14,7 @@ def printar_tabuleiro(tabuleiro):
     print(f'  {tabuleiro[7]}  |  {tabuleiro[8]}  |  {tabuleiro[9]}')
     print('     |     |       ')
 
+
 def escolher_marcador():
 
     marcador = ''
@@ -23,9 +26,11 @@ def escolher_marcador():
     else:
         return ('O', 'X')
 
+
 def marcar_posicao(tabuleiro, marcador, posicao):
 
     tabuleiro[posicao] = marcador
+
 
 def checar_vitoria(tabuleiro, marcador):
 
@@ -39,3 +44,11 @@ def checar_vitoria(tabuleiro, marcador):
         (tabuleiro[1] == marcador and tabuleiro[5] == marcador and tabuleiro[9] == marcador) or
         (tabuleiro[7] == marcador and tabuleiro[5] == marcador and tabuleiro[3] == marcador)
     )
+
+
+def primeiro_jogar():
+
+    if random.randint(0, 1) == 0:
+        return 'Jogador 1'
+    else:
+        return 'Jogador 2'
