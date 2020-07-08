@@ -9,4 +9,4 @@ Projeto do clássico Jogo da Velha desenvolvido em Python. No momento o jogo nã
 
 **Quer ajudar a melhorar o projeto? Envie uma pull request com sua contribuição** :wink: <br>
 
-**Desenvolvedor:** Everton Oliver
+**Desenvolvedor:** Everton Reis
